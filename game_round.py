@@ -19,7 +19,7 @@ class Round:
 
     # Method to return who won the round. Returns either 'Player' or 'Computer'
     def who_won(self, category):
-        if self.player_card_stat(category) > self.computer_card_stat(category):
+        if float(self.player_card_stat(category)) > float(self.computer_card_stat(category)):
             print("You won!")
             return 'Player'
         else:
@@ -37,6 +37,7 @@ class Round:
         print("You have:")
         print(self.player_card_stat(cat))
         self.who_won(cat)
+        return
 
 
 # Subclass for a round where the player picks the category.
@@ -60,7 +61,8 @@ class ComputerChoice(Round):
 
         # Method for the computer to choose a category. Returns category to be compared as a string
     def category_pick(self):
-        print("The computer is picking the category")
+        print("The computer is picking the category. Let's see your card first:")
+        self.player_card.view_card()
         choices_array = ['Minimum length', 'Maximum length', 'Minimum weight', 'Maximum weight', 'Lifespan']
         choice_num = randint(0, 4)
         choice = choices_array[choice_num]
@@ -69,6 +71,9 @@ class ComputerChoice(Round):
 
 
 new_round = PlayerChoice()
+new_round.simulate_round()
+
+new_round = ComputerChoice()
 new_round.simulate_round()
 
 
