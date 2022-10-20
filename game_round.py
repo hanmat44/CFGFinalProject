@@ -1,20 +1,42 @@
-from card import Card
 from random import randint
 from card import Card
 
 
-# Class with all the functions to simulate 1 round of top trumps
+# Parent class with all the functions to simulate 1 round of top trumps
 class Round:
     def __init__(self):
         self.player_card = Card()
         self.computer_card = Card()
         self.winner = None
 
+    # Method to return stat on player card
     def player_card_stat(self, category):
         return self.player_card.category_stat(category)
 
+    # Method to return stat on computer card
     def computer_card_stat(self, category):
         return self.computer_card.category_stat(category)
+
+    # Method to return who won the round. Returns either 'Player' or 'Computer'
+    def who_won(self, category):
+        if self.player_card_stat(category) > self.computer_card_stat(category):
+            print("You won!")
+            return 'Player'
+        else:
+            print("The computer won!")
+            return 'Computer'
+
+    def category_pick(self):
+        pass
+        # We will define this seperately in the subclasses
+
+    def simulate_round(self):
+        cat = self.category_pick()
+        print("Computer has:")
+        print(self.computer_card_stat(cat))
+        print("You have:")
+        print(self.player_card_stat(cat))
+        self.who_won(cat)
 
 
 # Subclass for a round where the player picks the category.
@@ -47,8 +69,7 @@ class ComputerChoice(Round):
 
 
 new_round = PlayerChoice()
-cat = new_round.category_pick()
-new_round.player_card_stat(cat)
+new_round.simulate_round()
 
 
 
