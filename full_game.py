@@ -6,15 +6,14 @@ class FullGame:
     def __init__(self):
         self.player_pick = PlayerChoice()
         self.comp_pick = ComputerChoice()
-        self.player_score = 0
-        self.computer_score = 0
+        self.player_score = 0 # set this to be a database call
+        self.computer_score = 0 # set this to be a database call
 
      # Update to new cards
     def new_instance(self):
         self.player_pick = PlayerChoice()
         self.comp_pick = ComputerChoice()
         return
-
 
     # Function to run a full game
     def run_game(self):
@@ -35,28 +34,27 @@ class FullGame:
             print("The computer won :(")
             return
 
+
     # Function to update score- link to database??
     def update_score_comp(self):
-        if self.comp_pick.who_won(self.comp_pick.category_pick()) == 'Player':
-            self.player_score += 1
+        if self.comp_pick.winner == 'Player':
+            self.player_score += 1 # alter this for database
         else:
             self.computer_score += 1
         print('Current scores:')
         print('Computer: {}'.format(self.computer_score))
         print('Player: {}'.format(self.player_score))
         return
-
 
     def update_score_player(self):
-        if self.player_pick.who_won(self.player_pick.category_pick()) == 'Player':
-            self.player_score += 1
+        if self.player_pick.winner == 'Player':
+            self.player_score += 1 # alter this for database
         else:
             self.computer_score += 1
         print('Current scores:')
         print('Computer: {}'.format(self.computer_score))
         print('Player: {}'.format(self.player_score))
         return
-
 
 
 new_game = FullGame()

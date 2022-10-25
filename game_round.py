@@ -36,7 +36,7 @@ class Round:
         print(self.computer_card_stat(cat))
         print("You have:")
         print(self.player_card_stat(cat))
-        self.who_won(cat)
+        self.winner = self.who_won(cat)
         return
 
 
@@ -70,11 +70,11 @@ class ComputerChoice(Round):
         return choice
 
 
-new_round = PlayerChoice()
-new_round.simulate_round()
-
-new_round = ComputerChoice()
-new_round.simulate_round()
+if __name__ == '__main__':
+    # new_round = PlayerChoice()
+    # new_round.simulate_round()
+    new_round = ComputerChoice()
+    new_round.simulate_round()
 
 
 
