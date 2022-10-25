@@ -56,6 +56,6 @@ class FullGame:
         print('Player: {}'.format(self.player_score))
         return
 
-
-new_game = FullGame()
-new_game.run_game()
+if __name__ == '__main__':
+    new_game = FullGame()
+    new_game.run_game()
