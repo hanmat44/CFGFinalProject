@@ -1,4 +1,4 @@
-from game_round import Round, PlayerChoice, ComputerChoice
+from game_round import PlayerChoice, ComputerChoice
 
 
 # Class to simulate a full TopTrumps game
@@ -9,7 +9,7 @@ class FullGame:
         self.player_score = 0 # set this to be a database call
         self.computer_score = 0 # set this to be a database call
 
-     # Update to new cards
+    # Update to new cards
     def new_instance(self):
         self.player_pick = PlayerChoice()
         self.comp_pick = ComputerChoice()
@@ -34,7 +34,6 @@ class FullGame:
             print("The computer won :(")
             return
 
-
     # Function to update score- link to database??
     def update_score_comp(self):
         if self.comp_pick.winner == 'Player':
@@ -56,6 +55,8 @@ class FullGame:
         print('Player: {}'.format(self.player_score))
         return
 
+
+# Quick test
 if __name__ == '__main__':
     new_game = FullGame()
     new_game.run_game()
