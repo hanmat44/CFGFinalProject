@@ -22,6 +22,9 @@ class FullGame:
             self.update_score_comp()
         return result
 
+    def get_cards(self):
+        return self.player_pick.get_cards()
+
 
     # Function to update score- link to database??
     # Available for database function integration

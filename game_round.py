@@ -30,6 +30,9 @@ class Round:
     def simulate_round(self, category):
         return self.player_won(category)
 
+    def get_cards(self):
+        #  implement name tuple
+        return (self.player_card.get_card(), self.computer_card.get_card())
 
 # Subclass for a round where the player picks the category.
 class PlayerChoice(Round):
