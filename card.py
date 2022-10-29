@@ -13,13 +13,16 @@ class Card:
         self.max_weight = card['weight_max']
 
     # Method to display 1 top trumps card
-    def view_card(self):
-        print('Name:', self.name)
-        print('Lifespan:', self.lifespan)
-        print('Minimum length:', self.min_length)
-        print('Maximum length:', self.max_length)
-        print('Minimum weight:', self.min_weight)
-        print('Maximum weight:', self.max_weight)
+    def get_card(self):
+        card_dict = {}
+        card_dict.update({'Name': self.name})
+        card_dict.update({'Lifespan': self.lifespan})
+        card_dict.update({'Minimum length': self.min_length})
+        card_dict.update({'Maximum length': self.max_length})
+        card_dict.update({'Minimum weight': self.min_weight})
+        card_dict.update({'Maximum weight': self.max_weight})
+
+        return card_dict
 
     # Returns value of a specified category
     def category_stat(self, category):

@@ -7,7 +7,6 @@ class Round:
     def __init__(self):
         self.player_card = Card()
         self.computer_card = Card()
-        self.winner = None
 
     # Method to return stat on player card
     def player_card_stat(self, category):
@@ -18,26 +17,18 @@ class Round:
         return self.computer_card.category_stat(category)
 
     # Method to return who won the round. Returns either 'Player' or 'Computer'
-    def who_won(self, category):
+    def player_won(self, category):
         if float(self.player_card_stat(category)) > float(self.computer_card_stat(category)):
-            print("You won!")
-            return 'Player'
+            return True
         else:
-            print("The computer won!")
-            return 'Computer'
+            return False
 
     def category_pick(self):
         pass
         # We will define this seperately in the subclasses
 
-    def simulate_round(self):
-        cat = self.category_pick()
-        print("Computer has:")
-        print(self.computer_card_stat(cat))
-        print("You have:")
-        print(self.player_card_stat(cat))
-        self.winner = self.who_won(cat)
-        return
+    def simulate_round(self, category):
+        return self.player_won(category)
 
 
 # Subclass for a round where the player picks the category.
@@ -46,13 +37,6 @@ class PlayerChoice(Round):
         super().__init__()
 
     # method for the player choosing a category. Returns category to be compared as a string
-    def category_pick(self):
-        print("Your turn to pick the category. Let's see the card:")
-        self.player_card.view_card()
-        decision = input('Which category do you want to pick?')
-        print('Category chosen: {}'.format(decision))
-        return decision
-
 
 # Subclass for when the computer picks the category
 class ComputerChoice(Round):
@@ -62,7 +46,7 @@ class ComputerChoice(Round):
         # Method for the computer to choose a category. Returns category to be compared as a string
     def category_pick(self):
         print("The computer is picking the category. Let's see your card first:")
-        self.player_card.view_card()
+        self.player_card.get_card()
         choices_array = ['Minimum length', 'Maximum length', 'Minimum weight', 'Maximum weight', 'Lifespan']
         choice_num = randint(0, 4)
         choice = choices_array[choice_num]
