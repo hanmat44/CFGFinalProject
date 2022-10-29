@@ -8,7 +8,7 @@ game = FullGame()
 def index():
     return render_template('index.html')
 
-@app.route('/submit/', method = ['POST'])
+@app.route('/submit/', methods = ['POST'])
 def start_game():
     game.new_instance()
     cards = game.get_cards()
@@ -24,7 +24,7 @@ def start_game():
                            player_maximum_weight=player_card['Maximum weight']
                            )
 
-@app.route('/submit/lifespan/', method = ['POST'])
+@app.route('/submit/lifespan/', methods = ['POST'])
 def lifespan():
     cards = game.get_cards()
     player_card = cards[0]
@@ -35,10 +35,10 @@ def lifespan():
         message = 'You Won!'
         alert = 'success'
     else:
-        message = 'You Loose!'
+        message = 'You Lose!'
         alert = 'danger'
 
-    return render_template('result.html',
+    return render_template('results.html',
                            player_name=player_card['Name'],
                            player_lifespan=player_card['Lifespan'],
                            player_minimum_length=player_card['Minimum length'],
@@ -58,21 +58,21 @@ def lifespan():
                            )
 
 
-@app.route('/submit/minimum_length/', method=['POST'])
-def lifespan():
+@app.route('/submit/minimum_length/', methods=['POST'])
+def min_len():
     cards = game.get_cards()
     player_card = cards[0]
     computer_card = cards[1]
 
-    result = game.run_game('Minimum Length')
+    result = game.run_game('Minimum length')
     if result:
         message = 'You Won!'
         alert = 'success'
     else:
-        message = 'You Loose!'
+        message = 'You Lose!'
         alert = 'danger'
 
-    return render_template('result.html',
+    return render_template('results.html',
                            player_name=player_card['Name'],
                            player_lifespan=player_card['Lifespan'],
                            player_minimum_length=player_card['Minimum length'],
@@ -92,21 +92,21 @@ def lifespan():
                            )
 
 
-@app.route('/submit/maximum_length/', method=['POST'])
-def lifespan():
+@app.route('/submit/maximum_length/', methods=['POST'])
+def max_len():
     cards = game.get_cards()
     player_card = cards[0]
     computer_card = cards[1]
 
-    result = game.run_game('Maximum Length')
+    result = game.run_game('Maximum length')
     if result:
         message = 'You Won!'
         alert = 'success'
     else:
-        message = 'You Loose!'
+        message = 'You Lose!'
         alert = 'danger'
 
-    return render_template('result.html',
+    return render_template('results.html',
                            player_name=player_card['Name'],
                            player_lifespan=player_card['Lifespan'],
                            player_minimum_length=player_card['Minimum length'],
@@ -126,8 +126,8 @@ def lifespan():
                            )
 
 
-@app.route('/submit/minimum_weight/', method=['POST'])
-def lifespan():
+@app.route('/submit/minimum_weight/', methods=['POST'])
+def min_weight():
     cards = game.get_cards()
     player_card = cards[0]
     computer_card = cards[1]
@@ -137,10 +137,10 @@ def lifespan():
         message = 'You Won!'
         alert = 'success'
     else:
-        message = 'You Loose!'
+        message = 'You Lose!'
         alert = 'danger'
 
-    return render_template('result.html',
+    return render_template('results.html',
                            player_name=player_card['Name'],
                            player_lifespan=player_card['Lifespan'],
                            player_minimum_length=player_card['Minimum length'],
@@ -160,8 +160,8 @@ def lifespan():
                            )
 
 
-@app.route('/submit/maximum_weight/', method=['POST'])
-def lifespan():
+@app.route('/submit/maximum_weight/', methods=['POST'])
+def max_weight():
     cards = game.get_cards()
     player_card = cards[0]
     computer_card = cards[1]
@@ -171,10 +171,10 @@ def lifespan():
         message = 'You Won!'
         alert = 'success'
     else:
-        message = 'You Loose!'
+        message = 'You Lose!'
         alert = 'danger'
 
-    return render_template('result.html',
+    return render_template('results.html',
                            player_name=player_card['Name'],
                            player_lifespan=player_card['Lifespan'],
                            player_minimum_length=player_card['Minimum length'],
@@ -192,6 +192,10 @@ def lifespan():
                            message=message,
                            alert=alert
                            )
+
+if __name__ == '__main__':
+    app.run()
+
 
 
 
