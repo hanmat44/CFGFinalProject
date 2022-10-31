@@ -28,7 +28,7 @@ class Round:
 
     def category_pick(self):
         pass
-        # We will define this seperately in the subclasses
+        # We will define this separately in the subclasses
 
     def simulate_round(self):
         cat = self.category_pick()
