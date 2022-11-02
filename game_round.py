@@ -1,5 +1,6 @@
 from random import randint
 from card import Card
+from db_utils import update_score
 
 # Parent class with all the functions to simulate 1 round of top trumps
 class Round:
@@ -18,8 +19,10 @@ class Round:
     # Method to return who won the round. Returns either 'Player', 'Computer' or 'Draw' - NEEDED FRONT-END
     def player_won(self, category):
         if float(self.player_card_stat(category)) > float(self.computer_card_stat(category)):
+            update_score('person')
             return 1
         elif float(self.player_card_stat(category)) == float(self.computer_card_stat(category)):
+            update_score('computer')
             return -1
         else:
             return 0
