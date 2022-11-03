@@ -39,7 +39,7 @@ def update_score(player):
     finally:
         if db_connection:
             db_connection.close()
-            print('DB connection closed')
+
 
 
 # View a players score
@@ -82,4 +82,4 @@ def clear_scores():
     finally:
         if db_connection:
             db_connection.close()
-            print('DB connection closed')
+
