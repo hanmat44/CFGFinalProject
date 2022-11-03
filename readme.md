@@ -6,8 +6,8 @@
 <p align="center">
     CFG FINAL PROJECT<br>
 An interactive and fun Animal Top Trumps game!<br>
-<a href="https://github.com/hanmat44/CFGFinalProject"><i>Link to Github »</i></a>
-<a href="https://github.com/hanmat44/CFGFinalProject.git"><i><br>Clone Repository »</i></a>
+<a href="https://github.com/hanmat44/CFGFinalProject"><i>Link to Github</i></a>
+<a href="https://github.com/hanmat44/CFGFinalProject.git"><i><br>Clone Repository</i></a>
     </p>
 
 ### <span style="color:green">What is Animal Top Trumps?</span>
@@ -72,7 +72,7 @@ Hannah Mathews, Kathryne Ellinger, Louise Miller, Libby Galletly, Amina Ganni
 
 ### <span style="color:green">Acknowledgements:</span>
 
-#### Original HTML, CSS, JS Templates (Before Altering)
+#### Original HTML/CSS Templates (Before Altering)
 - [Bootstrap](https://getbootstrap.com)
 - [Github](https://github.com/catprior?tab=repositories)
 
