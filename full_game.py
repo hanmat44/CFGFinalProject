@@ -1,12 +1,13 @@
 from game_round import PlayerChoice, ComputerChoice
 
+
 # Class to simulate a full TopTrumps game - NEEDED FOR FRONT-END
 class FullGame:
     def __init__(self):
         self.player_pick = PlayerChoice()
         self.comp_pick = ComputerChoice()
-        self.player_score = 0  # set this to be a database call
-        self.computer_score = 0  # set this to be a database call
+        self.player_score = 0
+        self.computer_score = 0
 
     # Update to new cards - NEEDED FOR FRONT-END
     def new_instance(self):
@@ -34,17 +35,12 @@ class FullGame:
     def get_score_player(self):
         return self.player_score
 
-    # Function to update score-link to database?? - NOT NEEDED FOR FRONT-END
-    # Available for database function integration
+    # Code for future improvements where multiple rounds can be played and scores kept track of in class:
 
     # def update_score_comp(self): - NOT NEEDED FOR FRONT-END
     #     self.computer_score += 1
 
     # Available for database function integration - NOT NEEDED FOR FRONT END
     # def update_score_player(self):
-    #     self.player_score += 1 # alter this for database
+    #     self.player_score += 1
 
-# Quick test - NOT NEEDED FOR FRONT-END
-# if __name__ == '__main__':
-#     new_game = FullGame()
-#     new_game.run_game()
