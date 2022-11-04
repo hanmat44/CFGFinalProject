@@ -8,7 +8,7 @@ game = FullGame()
 def index():
     return render_template('index.html')
 
-@app.route('/submit/', methods = ['POST'])
+@app.route('/submit/', methods=['POST'])
 def start_game():
     game.new_instance()
     cards = game.get_cards()
@@ -25,7 +25,7 @@ def start_game():
                            player_maximum_weight=player_card['Maximum weight'],
                            )
 
-@app.route('/submit/lifespan/', methods = ['POST'])
+@app.route('/submit/lifespan/', methods=['POST'])
 def lifespan():
     cards = game.get_cards()
     computer_card = cards[1]
@@ -78,7 +78,7 @@ def min_len():
     result = game.run_game('Minimum length')
     if result == 0:
         reason = "{} is shorter than a {}".format(player_card['Name'], computer_card['Name'])
-        message = 'CONGRATULATIONS, YOU LOSE!'
+        message = 'CONGRATULATIONS, YOU WON!'
         alert = 'success'
     elif result == -1:
         reason = "{} and {}, have the same min length".format(player_card['Name'], computer_card['Name'])
