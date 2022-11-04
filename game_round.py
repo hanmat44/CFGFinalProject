@@ -22,10 +22,11 @@ class Round:
             update_score('person')
             return 1
         elif float(self.player_card_stat(category)) == float(self.computer_card_stat(category)):
-            update_score('computer')
             return -1
         else:
+            update_score('computer')
             return 0
+
 
     # def category_pick(self):
     #     pass
