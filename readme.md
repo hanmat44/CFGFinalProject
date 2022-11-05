@@ -94,11 +94,8 @@ After you have played as many rounds as you would like, please run check_scores 
 
 ### Video Demo:
 
-<div style="width:260px;max-width:100%;"><div style="height:0;padding-bottom:52.69%;position:relative;"><iframe width="260" height="137" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameBorder="0" src="https://imgflip.com/embed/6zmk10"></iframe></div><p><a href="https://imgflip.com/gif/6zmk10">via Imgflip</a></p></div>
 
-https://imgflip.com/gif/6zmk10
-
-https://user-images.githubusercontent.com/102698430/200124047-41930f22-01a8-4d43-9047-8b1e0543f1c5.mp4
+https://user-images.githubusercontent.com/102698430/200124173-eedc195f-fd66-406e-9e75-855364c5e009.mov
 
 ### Creators:
 
