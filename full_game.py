@@ -33,18 +33,3 @@ class FullGame:
     # Returns player score - NEEDED FOR FRONT END
     def get_score_player(self):
         return self.player_score
-
-    # Function to update score-link to database?? - NOT NEEDED FOR FRONT-END
-    # Available for database function integration
-
-    # def update_score_comp(self): - NOT NEEDED FOR FRONT-END
-    #     self.computer_score += 1
-
-    # Available for database function integration - NOT NEEDED FOR FRONT END
-    # def update_score_player(self):
-    #     self.player_score += 1 # alter this for database
-
-# Quick test - NOT NEEDED FOR FRONT-END
-# if __name__ == '__main__':
-#     new_game = FullGame()
-#     new_game.run_game()
