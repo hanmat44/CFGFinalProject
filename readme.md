@@ -20,7 +20,7 @@ You can either Win, Draw or Lose, against the computer.
 
 A great creative and educational resource for children. Game is single player, which means you can play anytime, anywhere, whilst learning new facts and beating boredom.
 
-### Example:
+### Video Demo:(can only be seen on Github)
 
 https://user-images.githubusercontent.com/102698430/200124243-109e3982-9ebf-4198-87a5-1009a3dd6f14.mov
 
