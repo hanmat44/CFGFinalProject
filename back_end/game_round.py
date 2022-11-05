@@ -1,6 +1,5 @@
-from random import randint
-from card import Card
-from db_utils import update_score
+from back_end.card import Card
+from database.db_utils import update_score
 
 
 # Parent class with all the functions to simulate 1 round of top trumps

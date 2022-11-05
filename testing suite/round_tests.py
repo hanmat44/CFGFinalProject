@@ -1,6 +1,6 @@
 from unittest import TestCase
 from unittest.mock import Mock
-from game_round import Round, PlayerChoice, ComputerChoice
+from back_end.game_round import Round, PlayerChoice, ComputerChoice
 
 
 class TestRound(TestCase):

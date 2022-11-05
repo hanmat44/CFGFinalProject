@@ -1,4 +1,4 @@
-from game_round import PlayerChoice, ComputerChoice
+from back_end.game_round import PlayerChoice, ComputerChoice
 
 
 # Class to simulate a full TopTrumps game - NEEDED FOR FRONT-END

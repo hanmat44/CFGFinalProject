@@ -1,4 +1,4 @@
-from db_utils import view_score, clear_scores
+from database.db_utils import view_score, clear_scores
 
 
 class CheckScore:
