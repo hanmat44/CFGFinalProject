@@ -94,8 +94,8 @@ After you have played as many rounds as you would like, please run check_scores 
 
 ### Video Demo:
 
+https://user-images.githubusercontent.com/102698430/200124243-109e3982-9ebf-4198-87a5-1009a3dd6f14.mov
 
-https://user-images.githubusercontent.com/102698430/200124173-eedc195f-fd66-406e-9e75-855364c5e009.mov
 
 ### Creators:
 
