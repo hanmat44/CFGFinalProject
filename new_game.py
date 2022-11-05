@@ -4,9 +4,11 @@ from flask import Flask, render_template
 app = Flask(__name__)
 game = FullGame()
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
+
 
 @app.route('/submit/', methods=['POST'])
 def start_game():
@@ -24,6 +26,7 @@ def start_game():
                            player_minimum_weight=player_card['Minimum weight'],
                            player_maximum_weight=player_card['Maximum weight'],
                            )
+
 
 @app.route('/submit/lifespan/', methods=['POST'])
 def lifespan():
@@ -53,7 +56,6 @@ def lifespan():
                            player_maximum_length=player_card['Maximum length'],
                            player_minimum_weight=player_card['Minimum weight'],
                            player_maximum_weight=player_card['Maximum weight'],
-
 
                            opponent_name=computer_card['Name'],
                            opponent_image_link=computer_card['Image'],
@@ -240,9 +242,6 @@ def max_weight():
                            alert=alert
                            )
 
+
 if __name__ == '__main__':
     app.run()
-
-
-
-

@@ -17,10 +17,6 @@ class FullGame:
     # Function to run a full game - NEEDED FOR FRONT-END
     def run_game(self, category):
         result = self.player_pick.simulate_round(category)
-        if result:
-            self.get_score_player()
-        else:
-            self.get_score_comp()
         return result
 
     # Gets cards - NEEDED FOR FRONT-END

@@ -25,10 +25,6 @@ class Round:
         else:
             return 0
 
-    # def category_pick(self):
-    #     pass
-    #     # We will define this separately in the subclasses
-
     # NEEDED FOR FRONT-END
     def simulate_round(self, category):
         return self.player_won(category)

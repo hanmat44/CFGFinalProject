@@ -1,6 +1,6 @@
 from unittest import TestCase
 from unittest.mock import Mock
-from game_round import Round
+from game_round import Round, PlayerChoice, ComputerChoice
 
 
 class TestRound(TestCase):
@@ -47,3 +47,12 @@ class TestRound(TestCase):
         example_test = Round()
         result = example_test.get_cards()
         self.assertIsInstance(result, tuple)
+
+    # Testing if child classes PlayerChoice, Computer choice inherit correctly:
+    def test_player_choice_class(self):
+        example = PlayerChoice()
+        self.assertIsInstance(example, Round)
+
+    def test_computer_choice_class(self):
+        example = ComputerChoice()
+        self.assertIsInstance(example, Round)
