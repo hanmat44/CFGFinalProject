@@ -3,7 +3,7 @@ from unittest.mock import Mock
 from game_round import Round
 
 
-class test_round(TestCase):
+class TestRound(TestCase):
 
     # Tests function player_won
     # in the occasion the person wins
@@ -26,11 +26,11 @@ class test_round(TestCase):
         example_test.player_card.category_stat.return_value = 5
         example_test.computer_card.category_stat.return_value = 10
 
-        expected = 0 # i.e. computer wins
+        expected = 0  # i.e. computer wins
         actual = example_test.player_won('Lifespan')
         self.assertEqual(expected, actual)
 
-    # in the occasion theres a draw
+    # in the occasion there's a draw
     def test_player_won_draw(self):
         example_test = Round()
         example_test.player_card = Mock()
@@ -38,7 +38,7 @@ class test_round(TestCase):
         example_test.player_card.category_stat.return_value = 5
         example_test.computer_card.category_stat.return_value = 5
 
-        expected = -1 # i.e. draw
+        expected = -1  # i.e. draw
         actual = example_test.player_won('Lifespan')
         self.assertEqual(expected, actual)
 

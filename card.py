@@ -1,4 +1,6 @@
 from zoo_api import get
+from collections import defaultdict
+
 
 # Class for a top-trumps card -  NEEDED FOR FRONT-END
 class Card:
@@ -14,7 +16,7 @@ class Card:
 
     # Method to display 1 top trumps card - NEEDED FOR FRONT-END
     def get_card(self):
-        card_dict = {}
+        card_dict = defaultdict(float)
         card_dict.update({'Name': self.name})
         card_dict.update({'Image': self.image_link})
         card_dict.update({'Lifespan': self.lifespan})
