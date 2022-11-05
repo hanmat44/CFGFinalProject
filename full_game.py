@@ -30,13 +30,3 @@ class FullGame:
     # Returns player score - NEEDED FOR FRONT END
     def get_score_player(self):
         return self.player_score
-
-    # Code for future improvements where multiple rounds can be played and scores kept track of in class:
-
-    # def update_score_comp(self): - NOT NEEDED FOR FRONT-END
-    #     self.computer_score += 1
-
-    # Available for database function integration - NOT NEEDED FOR FRONT END
-    # def update_score_player(self):
-    #     self.player_score += 1
-
