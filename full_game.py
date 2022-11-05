@@ -1,12 +1,13 @@
 from game_round import PlayerChoice, ComputerChoice
 
+
 # Class to simulate a full TopTrumps game - NEEDED FOR FRONT-END
 class FullGame:
     def __init__(self):
         self.player_pick = PlayerChoice()
         self.comp_pick = ComputerChoice()
-        self.player_score = 0  # set this to be a database call
-        self.computer_score = 0  # set this to be a database call
+        self.player_score = 0
+        self.computer_score = 0
 
     # Update to new cards - NEEDED FOR FRONT-END
     def new_instance(self):
@@ -16,10 +17,6 @@ class FullGame:
     # Function to run a full game - NEEDED FOR FRONT-END
     def run_game(self, category):
         result = self.player_pick.simulate_round(category)
-        if result:
-            self.get_score_player()
-        else:
-            self.get_score_comp()
         return result
 
     # Gets cards - NEEDED FOR FRONT-END

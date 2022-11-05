@@ -2,6 +2,7 @@ from random import randint
 from card import Card
 from db_utils import update_score
 
+
 # Parent class with all the functions to simulate 1 round of top trumps
 class Round:
     def __init__(self):
@@ -28,10 +29,6 @@ class Round:
             return 0
 
 
-    # def category_pick(self):
-    #     pass
-    #     # We will define this separately in the subclasses
-
     # NEEDED FOR FRONT-END
     def simulate_round(self, category):
         return self.player_won(category)
@@ -40,12 +37,12 @@ class Round:
     def get_cards(self):
         return self.player_card.get_card(), self.computer_card.get_card()
 
+
 # Subclass for a round where the player picks the category - - NEEDED FRONT-END
 class PlayerChoice(Round):
     def __init__(self):
         super().__init__()
 
-    # method for the player choosing a category. Returns category to be compared as a string
 
 # Subclass for when the computer picks the category
 class ComputerChoice(Round):
@@ -61,17 +58,4 @@ class ComputerChoice(Round):
     #     choice = choices_array[choice_num]
     #     print('Category chosen: {}'.format(choice))
     #     return choice
-
-
-# if __name__ == '__main__':
-#     # new_round = PlayerChoice()
-#     # new_round.simulate_round()
-#     new_round = ComputerChoice()
-#     new_round.simulate_round()
-
-
-
-
-
-
 

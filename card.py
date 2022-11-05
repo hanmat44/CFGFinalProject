@@ -1,4 +1,6 @@
 from zoo_api import get
+from collections import defaultdict
+
 
 # Class for a top-trumps card -  NEEDED FOR FRONT-END
 class Card:
@@ -14,7 +16,7 @@ class Card:
 
     # Method to display 1 top trumps card - NEEDED FOR FRONT-END
     def get_card(self):
-        card_dict = {}
+        card_dict = defaultdict(float)
         card_dict.update({'Name': self.name})
         card_dict.update({'Image': self.image_link})
         card_dict.update({'Lifespan': self.lifespan})
@@ -27,21 +29,15 @@ class Card:
 
     # Returns value of a specified category -  NEEDED FOR FRONT-END
     def category_stat(self, category):
-        # There must be a better way of writing this
-        try:
-            if category == 'Lifespan':
-                return self.lifespan
-            elif category == 'Minimum length':
-                return self.min_length
-            elif category == 'Maximum length':
-                return self.max_length
-            elif category == 'Maximum weight':
-                return self.max_weight
-            elif category == 'Minimum weight':
-                return self.min_weight
-            else:
-                raise ValueError
-        except ValueError:
-            print('Invalid category')
-            return ValueError
-
+        if category == 'Lifespan':
+            return self.lifespan
+        elif category == 'Minimum length':
+            return self.min_length
+        elif category == 'Maximum length':
+            return self.max_length
+        elif category == 'Maximum weight':
+            return self.max_weight
+        elif category == 'Minimum weight':
+            return self.min_weight
+        else:
+            raise ValueError('Invalid Category')
