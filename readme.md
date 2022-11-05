@@ -20,7 +20,7 @@ You can either Win, Draw or Lose, against the computer.
 
 A great creative and educational resource for children. Game is single player, which means you can play anytime, anywhere, whilst learning new facts and beating boredom.
 
-### Example Video of Game:
+### Example:
 
 https://user-images.githubusercontent.com/102698430/200124243-109e3982-9ebf-4198-87a5-1009a3dd6f14.mov
 
@@ -90,7 +90,7 @@ You are now ready to run the sql component of the game.
 
 After you have played as many rounds as you would like, please run check_scores to see your final score. The scores will then be reset.
 
-### Image:
+### Game Image:
 
 <br>
 <p align="center">
