@@ -2,7 +2,7 @@
 <p align="center">
     <img src="static/safari.png" alt="safari_logo" width="250" height="200"></p>
 
-## <p align="center"><strong><span style="color:green">Animal Top Trumps</span></strong>
+## <p align="center"><strong>Animal Top Trumps</strong>
 <p align="center">
     CFG FINAL PROJECT<br>
 An interactive and fun Animal Top Trumps game!<br>
@@ -10,7 +10,7 @@ An interactive and fun Animal Top Trumps game!<br>
 <a href="https://github.com/hanmat44/CFGFinalProject.git"><i><br>Clone Repository</i></a>
     </p>
 
-### <span style="color:green">What is Animal Top Trumps?</span>
+### What is Animal Top Trumps?
 
 An interactive, fun and educational game for children.
 
@@ -20,24 +20,13 @@ You can either Win, Draw or Lose, against the computer.
 
 A great creative and educational resource for children. Game is single player, which means you can play anytime, anywhere, whilst learning new facts and beating boredom.
 
-### <span style="color:green">Example Image of Game:</span>
+### Example Image of Game:
 <br>
 <p align="center">
     <img src="static/example.png" alt="safari_logo" width="400" height="250">
   </p>
 
-### <span style="color:green">Gameplay</span>
-
-Press the 'Start' button to enter the game and view your randomly generated animal card.
-Choose your desired stat and click the button to see the results.
-
-If your Animals Lifespan, Maximum length or Maximum weight is higher than the computer, you win!
-
-Alternatively if your Animals Minimum length or Minimum weight is lowest, you win!
-
-Click the 'Play Again' button to play more rounds.
-
-### <span style="color:green">How to get started:</span>
+### How to get started:
 
 To get a local copy to run, install the following packages using pip:
 
@@ -48,6 +37,10 @@ To get a local copy to run, install the following packages using pip:
 - Requests
   ```sh
   pip install requests
+  
+- SQL Connector
+  ```sh
+  pip install mysql.connector
 
 ***Please make sure all files/images are in one project folder before running.***
 
@@ -56,25 +49,67 @@ Run from new_game.py and click on local server at the bottom to load in web-brow
 If running off a MacBook, please make sure Airplay receiver is disabled under sharing, system preferences.
 As this can sometimes block the required port. 
 
-### <span style="color:green">Video Demo:</span>
-<img src="https://giphy.com/embed/Z3fxcv71VS2LkqLbwp" width="480" height="254" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/Z3fxcv71VS2LkqLbwp">via GIPHY</a></p>
+### Gameplay
 
-### <span style="color:green">Creators:</span>
+Press the 'Start' button to enter the game and view your randomly generated animal card.
+Choose your desired stat and click the button to see the results.
+
+If your Animals Lifespan, Maximum length or Maximum weight is higher than the computer, you win!
+
+Alternatively if your Animals Minimum length or Minimum weight is lowest, you win!
+
+Click the 'Play Again' button to play more rounds.
+
+### Database 
+
+To use the database functionality of the game you must first:
+
+Create a config.py python that includes the following:<br>
+
+    
+    USER = 'root'
+    HOST = 'localhost'
+    PASSWORD = 'your password for my_sql'
+
+Then run the following code in MySQL:<br>
+
+    CREATE database toptrumps; 
+
+    USE toptrumps;
+
+    CREATE table TotalScores(
+        player varchar(255),
+      score int
+      );
+
+    INSERT INTO TotalScores
+    (player, score)
+    VALUES
+    ('person',0),
+    ('computer',0);
+
+You are now ready to run the sql component of the game.
+
+After you have played as many rounds as you would like, please run check_scores to see your final score. The scores will then be reset.
+
+### Video Demo:
+
+### Creators:
 
 Hannah Mathews, Kathryne Ellinger, Louise Miller, Libby Galletly, Amina Ganni
 
-### <span style="color:green">Link to Resources:</span>
+### Link to Resources:
 
 - [Bootstrap](https://getbootstrap.com)
 - [Flask](https://flask.palletsprojects.com)
 - [Zoo Animal API](https://zoo-animal-api.herokuapp.com)
 - [PyCharm](https://www.jetbrains.com/pycharm/)
 
-### <span style="color:green">Acknowledgements:</span>
+### Acknowledgements:
 
 #### Original HTML/CSS Templates (Before Altering)
 - [Bootstrap](https://getbootstrap.com)
-- [Github](https://github.com/catprior?tab=repositories)
+- [Github Inspiration](https://github.com/catprior?tab=repositories)
 
 #### Images
 - [Zoo Animal API](https://zoo-animal-api.herokuapp.com)
