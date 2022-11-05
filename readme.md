@@ -112,7 +112,7 @@ Hannah Mathews, Kathryne Ellinger, Louise Miller, Libby Galletly, Amina Ganni
 
 #### Original HTML/CSS Templates (Before Altering)
 - [Bootstrap](https://getbootstrap.com)
-- [Github Inspiration](https://github.com/catprior?tab=repositories)
+- [Top Trumps Inspiration](https://github.com/catprior?tab=repositories)
 
 #### Images
 - [Zoo Animal API](https://zoo-animal-api.herokuapp.com)
